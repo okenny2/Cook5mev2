@@ -4,4 +4,8 @@ class Dish < ActiveRecord::Base
 	    belongs_to :diets
    	    belongs_to :cooks
 
+   	    IMAGES = [
+   	    	"http://cdn.meme.am/instances/55981469.jpg",
+   	    	"http://upload.wikimedia.org/wikipedia/en/4/44/Derek_Smalls.jpg"
+   	    ]
 end

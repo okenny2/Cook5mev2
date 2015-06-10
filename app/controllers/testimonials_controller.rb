@@ -1,4 +1,6 @@
 class TestimonialsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @testimonials = Testimonial.all
   end
@@ -13,7 +15,7 @@ class TestimonialsController < ApplicationController
 
   def create
     @testimonial = Testimonial.new
-    @testimonial.user_id = params[:user_id]
+    @testimonial.user_id = current_user.id
     @testimonial.cust_story = params[:cust_story]
     @testimonial.cook_id = params[:cook_id]
     @testimonial.cook_story = params[:cook_story]
@@ -32,7 +34,7 @@ class TestimonialsController < ApplicationController
   def update
     @testimonial = Testimonial.find(params[:id])
 
-    @testimonial.user_id = params[:user_id]
+    @testimonial.user_id = current_user.id
     @testimonial.cust_story = params[:cust_story]
     @testimonial.cook_id = params[:cook_id]
     @testimonial.cook_story = params[:cook_story]

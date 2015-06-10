@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609215425) do
+ActiveRecord::Schema.define(version: 20150610030803) do
 
   create_table "cooks", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150609215425) do
     t.integer  "diet_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "zodiac"
   end
 
   create_table "diets", force: :cascade do |t|
@@ -52,6 +53,11 @@ ActiveRecord::Schema.define(version: 20150609215425) do
     t.string   "cook_story"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "client"
+    t.string   "hotel_name"
+    t.string   "hotel_address"
+    t.string   "hotel_city"
+    t.string   "hotel_country"
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,6 +74,12 @@ ActiveRecord::Schema.define(version: 20150609215425) do
     t.string   "username"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "client_name"
+    t.string   "language"
+    t.string   "employer"
+    t.string   "nationality"
+    t.string   "zodiac"
+    t.string   "desire"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

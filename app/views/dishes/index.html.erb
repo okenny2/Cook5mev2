@@ -35,13 +35,7 @@
           <dt>Cook</dt>
           <dd><%= Cook.find_by({ :id => dish.cook_id}).name %></dd>
           
-          <dt>Image url</dt>
-
-          <a href="https://www.flickr.com/photos/doug88888/rand(0,1000000">
-             <img src="smiley.gif"alt="HTML tutorial" style="width:42px;height:42px;border:0">
-          </a>
- 
-
+       
         </dl>
         <div class="btn-group btn-group-justified">
           <a href="/dishes/<%= dish.id %>" class="btn btn-primary">

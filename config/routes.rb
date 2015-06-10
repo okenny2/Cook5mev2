@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   # Routes for the Testimonial resource:
+
+  root to: 'hotels#index'
+  
   # CREATE
   get "/testimonials/new", :controller => "testimonials", :action => "new"
   post "/create_testimonial", :controller => "testimonials", :action => "create"
@@ -34,7 +37,6 @@ Rails.application.routes.draw do
   get "/delete_hotel/:id", :controller => "hotels", :action => "destroy"
   #------------------------------
 
-  "hotels#index"
 
   # Routes for the Dish resource:
   # CREATE

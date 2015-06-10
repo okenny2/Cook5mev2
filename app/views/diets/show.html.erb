@@ -45,6 +45,19 @@
 
          <dt>Cooks</dt>
          
+       <dt>Users</dt>
+
+      <ul class="list-group">
+      <% User.all.each do |user| %>
+        <li class="list-group-item">
+          <%= user.email %> 
+        </li>
+      <% end %>
+      </ul>
+      
+        <br></br>
+
+         <dt>Cooks</dt>         
 
        <ul class="list-group">
       <% @diet.cooks.each do |dish| %>
