@@ -17,7 +17,8 @@
               <dd><%= Diet.find_by({ :id => @dish.diet_id}).name %></dd>
 
               <dt>Cook</dt>
-#
+              <dd><%= Cook.find_by({ :id => @dish.cook_id}).name %></dd>
+
 
             </dl>
             <div class="btn-group btn-group-justified">
