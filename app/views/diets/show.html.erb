@@ -1,0 +1,60 @@
+<!-- Responsive panel example-->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Diet #<%= @diet.id %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <dt>Name</dt>
+              <dd><%= @diet.name %></dd>
+
+            </dl>
+            <div class="btn-group btn-group-justified">
+              <a href="/diets" class="btn btn-primary">
+                <i class="fa fa-chevron-left"></i>
+              </a>
+
+              <a href="/diets/<%= @diet.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+
+              <a href="/delete_diet/<%= @diet.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <dt>Diet Dishes</dt>
+
+      <ul class="list-group">
+      <% @diet.dishes.each do |dish| %>
+        <li class="list-group-item">
+          <%= dish.name %> 
+        </li>
+      <% end %>
+      </ul>
+      
+        <br></br>
+
+         <dt>Cooks</dt>
+
+       <ul class="list-group">
+      <% @diet.cooks.each do |dish| %>
+        <li class="list-group-item">
+          <%= dish.name %> 
+        </li>
+      <% end %>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<!-- End responsive panel example -->
