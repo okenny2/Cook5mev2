@@ -30,14 +30,12 @@ class TestimonialsController < ApplicationController
 
   def edit
     @testimonial = Testimonial.find(params[:id])
-    @testimonial.user_id = current_user.id
 
   end
 
   def update
     @testimonial = Testimonial.find(params[:id])
 
-    @testimonial.user_id = current_user.id
     @testimonial.cust_story = params[:cust_story]
     @testimonial.cook_id = params[:cook_id]
     @testimonial.hotel_id = params[:hotel_id]
@@ -52,7 +50,6 @@ class TestimonialsController < ApplicationController
 
   def destroy
     @testimonial = Testimonial.find(params[:id])
-    @testimonial.user_id = current_user.id
 
     @testimonial.destroy
 
