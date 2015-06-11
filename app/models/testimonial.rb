@@ -3,6 +3,7 @@ class Testimonial < ActiveRecord::Base
 	validates :cook_id, :presence => true
 	belongs_to :cooks # i'd like to include this
 	belongs_to :users # i'd like to include this
+	belongs_to :hotels # i'd like to include this
 
 
 	   	   IMAGES = [

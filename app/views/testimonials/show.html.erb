@@ -10,6 +10,8 @@
         <div class="row">
           <div class="col-md-12">
             <dl class="dl-horizontal">
+
+              
               <dt>User</dt>
               <dd><%= User.find_by({ :id => @testimonial.user_id}).email %></dd>
 
@@ -20,8 +22,7 @@
               
               <dd><%= Cook.find_by({ :id => @testimonial.cook_id}).name %></dd>
 
-
-
+              
               <dt>Cook story</dt>
               <dd><%= @testimonial.cook_story %></dd>
 

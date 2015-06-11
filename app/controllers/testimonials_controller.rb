@@ -18,6 +18,7 @@ class TestimonialsController < ApplicationController
     @testimonial.user_id = current_user.id
     @testimonial.cust_story = params[:cust_story]
     @testimonial.cook_id = params[:cook_id]
+    @testimonial.hotel_id = params[:hotel_id]
     @testimonial.cook_story = params[:cook_story]
 
     if @testimonial.save
@@ -29,6 +30,8 @@ class TestimonialsController < ApplicationController
 
   def edit
     @testimonial = Testimonial.find(params[:id])
+    @testimonial.user_id = current_user.id
+
   end
 
   def update
@@ -37,6 +40,7 @@ class TestimonialsController < ApplicationController
     @testimonial.user_id = current_user.id
     @testimonial.cust_story = params[:cust_story]
     @testimonial.cook_id = params[:cook_id]
+    @testimonial.hotel_id = params[:hotel_id]
     @testimonial.cook_story = params[:cook_story]
 
     if @testimonial.save
@@ -48,6 +52,7 @@ class TestimonialsController < ApplicationController
 
   def destroy
     @testimonial = Testimonial.find(params[:id])
+    @testimonial.user_id = current_user.id
 
     @testimonial.destroy
 

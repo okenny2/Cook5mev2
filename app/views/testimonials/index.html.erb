@@ -40,15 +40,16 @@ table {
       </div>
       <div class="panel-body">
         <dl>
+
+        
           <dt>User</dt>
-          <dd><%= User.find_by({ :id => testimonial.user_id}).email %></dd>
+          <dd><%= User.find_by({ :id => testimonial.user_id}).client_name %></dd>
 
           <dt>Cust story</dt>
           <dd><%= testimonial.cust_story %></dd>
 
           <dt>Cook</dt>
           <dd><%= Cook.find_by({ :id => testimonial.cook_id}).name %></dd>
-
 
           <dt>Cook story</dt>
           <dd><%= testimonial.cook_story %></dd>
@@ -101,14 +102,13 @@ table {
               <col width="200">
               <col width="200">
               <col width="200">
-              <col width="75">
-             
+              <col width="75">             
 
               <tr>
                 <td><%= user.client_name %></td>
                 <td><%= user.email %></td>
                 <td><%= user.language %></td>
-                
+            
                 <td><img src="<%= Testimonial::IMAGES.sample %>" width="100%" /></td>
 
               </tr>
