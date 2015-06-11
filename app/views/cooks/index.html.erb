@@ -38,8 +38,9 @@
           <dd><%= Diet.find_by({ :id => cook.diet_id}).name %></dd>
 
 
-
         </dl>
+        <img src="<%= Cook::IMAGES.sample %>" width="100%" />
+
         <div class="btn-group btn-group-justified">
           <a href="/cooks/<%= cook.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>

@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    padding: 1px;
+}
+table {
+    border-spacing: 1px;
+}
+</style>
+</head>
+<body>
+
+
 <div class="page-header">
   <h1>
     Testimonials
@@ -25,7 +41,6 @@
       <div class="panel-body">
         <dl>
           <dt>User</dt>
-
           <dd><%= User.find_by({ :id => testimonial.user_id}).email %></dd>
 
           <dt>Cust story</dt>
@@ -53,9 +68,56 @@
           </a>
         </div>
       </div>
-    </div>
+    </div>  
+    
+      <br></br>
   </div>
 <% end %>
+</div>
+
+<div class="row isotope-container">
+  <div class="col-xs-200 col-sm-200 col-md-200 col-lg-200 isotope-item">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">All Users:</h3>
+      </div>
+        <div class="panel-body">
+          <dl>
+              <table style="width:100%">
+              <col width="200">
+              <col width="200">
+              <col width="200">
+              <col width="75">
+             
+              <tr>
+                 <th>Client Name</th>
+                 <th>Email</th>
+                 <th>Language</th>
+                 <th>Selfie</th>
+              </tr>
+            </table>
+             <% User.all.each do |user| %>
+            <table style="width:100%">
+              <col width="200">
+              <col width="200">
+              <col width="200">
+              <col width="75">
+             
+
+              <tr>
+                <td><%= user.client_name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.language %></td>
+                
+                <td><img src="<%= Testimonial::IMAGES.sample %>" width="100%" /></td>
+
+              </tr>
+            </table>
+            <% end %>
+          </dl>
+</div>
+</div>
+</div>
 </div>
 
 <!-- You can ignore the following. It's a quick and dirty example of how to get a Pinterest-style layout with quick search. -->

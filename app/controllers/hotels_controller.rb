@@ -30,6 +30,7 @@ class HotelsController < ApplicationController
   end
 
   def update
+
     @hotel = Hotel.find(params[:id])
 
     @hotel.name = params[:name]
@@ -45,6 +46,7 @@ class HotelsController < ApplicationController
   end
 
   def destroy
+
     @hotel = Hotel.find(params[:id])
 
     @hotel.destroy

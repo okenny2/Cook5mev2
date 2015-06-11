@@ -26,9 +26,25 @@
     <%= f.text_field :client_name %>
   </div>  
 
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
+  </div>  
+
+  <div class="field">
+    <%= f.label :employer %><br />
+    <%= f.text_field :employer %>
+  </div>  
+
+  <div class="field">
+    <%= f.label :nationality %><br />
+    <%= f.text_field :nationality %>
+  </div>  
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+

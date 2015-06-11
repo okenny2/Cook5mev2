@@ -24,6 +24,9 @@
       </div>
       <div class="panel-body">
         <dl>
+          <dt>User</dt>
+          <dd><%= User.find_by({ :id => hotel.user_id}).email %></dd>
+
           <dt>Name</dt>
           <dd><%= hotel.name %></dd>
 
@@ -36,7 +39,9 @@
           <dt>Country</dt>
           <dd><%= hotel.country %></dd>
 
+
         </dl>
+         <img src="<%= Hotel::IMAGES.sample %>" width="100%" />
         <div class="btn-group btn-group-justified">
           <a href="/hotels/<%= hotel.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>
