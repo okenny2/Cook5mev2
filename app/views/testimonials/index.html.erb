@@ -49,8 +49,9 @@ table {
           <dd><%= testimonial.cust_story %></dd>
 
           <dt>Cook</dt>
+                    
           <dd><%= Cook.find_by({ :id => testimonial.cook_id}).name %></dd>
-
+          
           <dt>Cook story</dt>
           <dd><%= testimonial.cook_story %></dd>
 
